@@ -63,7 +63,7 @@ class PublicUserAPITests(TestCase):
             email=payload['email']).exists()
         self.assertFalse(user_exists)
 
-    def tedt_create_token_for_user(self):
+    def test_create_token_for_user(self):
         """Test that a token is created for user"""
         payload = {'email': 'test@gmail.com', 'password': 'testpass'}
         create_user(**payload)
